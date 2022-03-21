@@ -3,6 +3,7 @@ package com.rabbitmq.demo.publisher;
 import com.rabbitmq.demo.config.PropertiesConfig;
 import com.rabbitmq.demo.dao.StudentDetailsDTO;
 import com.rabbitmq.demo.dao.StudentResponseDTO;
+import com.rabbitmq.demo.exception.ValidationException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -27,8 +28,8 @@ public class StudentControllerPublisher {
 
     @PostMapping(value = "/create")
     public ResponseEntity<Object> createStudentDetails(@Valid @RequestBody StudentDetailsDTO
-                                                                   studentDetailsDTO)  {
-       // rabbitTemplate.convertAndSend(rabbitMQConfig.createStudentQueue().getName(), studentDetailsDTO);
+                                                                   studentDetailsDTO) {
+        // rabbitTemplate.convertAndSend(rabbitMQConfig.createStudentQueue().getName(), studentDetailsDTO);
         rabbitTemplate.convertAndSend(propertiesConfig.getExchangeName(),
                 propertiesConfig.getRoutingKey(),
                 studentDetailsDTO);
