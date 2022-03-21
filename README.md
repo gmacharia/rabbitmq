@@ -2,7 +2,7 @@
 
 ## Please ensure you have the following installed before hand.
 
-    - java prefferably 11+
+    - java preferably 11+
     - h2
     - rabbitmq
     - git
