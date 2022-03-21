@@ -1,5 +1,7 @@
 package com.rabbitmq.demo.dao;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,6 +19,7 @@ import javax.validation.constraints.Size;
 @Data
 public class StudentDetailsDTO {
 
+    @JsonProperty
     @NotNull(message = "student id  cannot be null")
     @NotEmpty(message = "student id cannot be empty")
     @Email
