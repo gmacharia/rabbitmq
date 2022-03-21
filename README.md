@@ -7,7 +7,7 @@
     - rabbitmq
     - git
 
-## This is a sample project that acts as a producer and consumer when sending messaged to queues
+## This is a sample project that acts as a producer and consumer when sending messages to queues
 
 
 ```
