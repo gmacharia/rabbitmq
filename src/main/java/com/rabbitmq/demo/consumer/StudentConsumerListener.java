@@ -23,7 +23,7 @@ public class StudentConsumerListener implements ChannelAwareMessageListener {
 
     @Override
     //@RabbitListener(queues = "queue name")
-    public void onMessage(@NotNull Message message, Channel channel) throws Exception {
+    public void onMessage(@NotNull Message message, Channel channel) {
         log.info("We have received the following message in the queue ::" + message.getBody().toString());
         try {
             StudentDetailsDTO studentDetailsDTO = objectMapper.readValue(message.getBody(), StudentDetailsDTO.class);

@@ -19,7 +19,7 @@ public class StudentService {
 
     public final StudentRepository studentRepository;
 
-    public  ResponseEntity<Object> processStudentDetails(StudentDetailsDTO studentDetailsDTO)  {
+    public  ResponseEntity<?> processStudentDetails(StudentDetailsDTO studentDetailsDTO)  {
         log.info("sanitized payload received before saving {}", studentDetailsDTO);
 
         try {
