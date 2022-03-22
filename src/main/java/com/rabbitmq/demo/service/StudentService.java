@@ -2,7 +2,6 @@ package com.rabbitmq.demo.service;
 
 import com.rabbitmq.demo.dao.StudentDetailsDTO;
 import com.rabbitmq.demo.entity.StudentEntity;
-import com.rabbitmq.demo.exception.ValidationException;
 import com.rabbitmq.demo.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
