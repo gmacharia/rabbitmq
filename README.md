@@ -17,4 +17,4 @@ git clone https://github.com/gmacharia/rabbitmq.git
 ```
 http://localhost:8080/v3/api-docs/
 
-http://localhost:10010/swagger-ui/
+http://localhost:10010/swagger-ui.html
