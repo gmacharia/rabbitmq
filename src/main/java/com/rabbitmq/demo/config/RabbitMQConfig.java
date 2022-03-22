@@ -2,7 +2,6 @@ package com.rabbitmq.demo.config;
 
 import com.rabbitmq.demo.consumer.StudentConsumerListener;
 import lombok.AllArgsConstructor;
-import lombok.NonNull;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;

@@ -17,9 +17,6 @@ import javax.validation.constraints.Size;
 @Data
 public class StudentDetailsDTO {
 
-    @JsonProperty
-    @NotNull(message = "student id  cannot be null")
-    @NotEmpty(message = "student id cannot be empty")
     private int studentID;
 
     private String surName;
@@ -28,9 +25,6 @@ public class StudentDetailsDTO {
 
     private int age;
 
-    @JsonProperty
-    @NotEmpty
-    @Size(min = 2, message = "id number should have at least 5 digits")
     private int idNumber;
 
     private String occupation;
