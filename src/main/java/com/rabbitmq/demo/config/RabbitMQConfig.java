@@ -33,6 +33,7 @@ public class RabbitMQConfig {
 
     /**
      * Create a new student Queue
+     * @return 
      */
     public Queue createStudentQueue() {
         return new Queue(propertiesConfig.getStudentQueue());
@@ -57,6 +58,7 @@ public class RabbitMQConfig {
 
     /**
      * Convert request to json
+     * @return 
      */
     @Bean
     public MessageConverter messageConverter() {
@@ -65,6 +67,8 @@ public class RabbitMQConfig {
 
     /**
      * Configs for publishing to a Queue
+     * @param connectionFactory
+     * @return 
      */
     @Bean
     public AmqpTemplate template(ConnectionFactory connectionFactory) {
@@ -75,8 +79,10 @@ public class RabbitMQConfig {
 
     /**
      * Configs for listening to a Queue
+     * @param studentConsumerListener
+     * @return 
      */
-    @Bean
+   /* @Bean
     public SimpleMessageListenerContainer listenerContainer(
             StudentConsumerListener studentConsumerListener) {
 
@@ -89,5 +95,5 @@ public class RabbitMQConfig {
         listenerContainer.setPrefetchCount(propertiesConfig.getRabbitMQPrefetch());
         listenerContainer.setDefaultRequeueRejected(false);
         return listenerContainer;
-    }
+    }*/
 }
