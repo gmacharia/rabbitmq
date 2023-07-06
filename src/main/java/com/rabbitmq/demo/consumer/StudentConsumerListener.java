@@ -16,9 +16,9 @@ import java.io.IOException;
 @RequiredArgsConstructor
 @Component
 @Slf4j
-public class StudentConsumerListener {//implements ChannelAwareMessageListener {
+public class StudentConsumerListener implements ChannelAwareMessageListener {
 
-   /* private final ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper;
     private final StudentService studentService;
 
     @Override
@@ -32,5 +32,5 @@ public class StudentConsumerListener {//implements ChannelAwareMessageListener {
         } catch (IOException e) {
             log.info("Exception caught when reading the message from the queue :: ");
         }
-    }*/
+    }
 }

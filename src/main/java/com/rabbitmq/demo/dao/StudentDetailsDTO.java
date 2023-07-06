@@ -6,7 +6,9 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.Range;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,18 +24,19 @@ public class StudentDetailsDTO {
     private int studentID;
 
     @NotNull(message = "surname cant be null")
+    @NotEmpty
     private String surName;
 
-    @NotNull
+    @NotNull(message = "otherNames cant be null")
+    @NotEmpty
     private String otherNames;
 
-    @NotNull
     private int age;
 
     @NotNull
+    @Range(min = 1)
     private int idNumber;
 
-    @NotNull
     private String occupation;
 }
 

@@ -82,7 +82,7 @@ public class RabbitMQConfig {
      * @param studentConsumerListener
      * @return 
      */
-   /* @Bean
+    @Bean
     public SimpleMessageListenerContainer listenerContainer(
             StudentConsumerListener studentConsumerListener) {
 
@@ -95,5 +95,5 @@ public class RabbitMQConfig {
         listenerContainer.setPrefetchCount(propertiesConfig.getRabbitMQPrefetch());
         listenerContainer.setDefaultRequeueRejected(false);
         return listenerContainer;
-    }*/
+    }
 }
